@@ -1,1 +1,9 @@
+# Ignore all CSV files
+*.csv
+
+# Ignore entire data folder if used
+data/
+
+# Ignore Jupyter notebooks if you're only submitting .py scripts
+*.ipynb
 
