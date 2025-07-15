@@ -1,14 +1,13 @@
 import polars as pl
 
-# Step 1: Load the dataset
-filename = r"c:\Users\lenovo\Documents\MS documents\RA work\1-15 July\period_03\2024_fb_ads_president_scored_anon.csv"  # Change to your dataset file
+filename = "filepath.csv"  # Change to your dataset file
 df = pl.read_csv(filename)
 
-# Step 2: Overall Descriptive Statistics
+# Overall Descriptive Statistics
 print("\n=== Polars: DataFrame.describe() ===")
 print(df.describe())
 
-# Step 3: Unique values per column
+# Unique values per column
 print("\n=== Number of Unique Values per Column ===")
 for col in df.columns:
     unique_count = df.select(pl.col(col).n_unique()).item()
@@ -30,7 +29,7 @@ for col in df.columns:
         print(top_values)
 
 
-# Step 5: Grouped by page_id
+# Grouped by page_id
 if "page_id" in df.columns:
     print("\n=== Grouped Stats by page_id ===")
     try:
@@ -47,7 +46,7 @@ if "page_id" in df.columns:
     except Exception as e:
         print(f"Grouping by page_id failed: {e}")
 
-# Step 6: Grouped by (page_id, ad_id)
+# Grouped by (page_id, ad_id)
 if "page_id" in df.columns and "ad_id" in df.columns:
     print("\n=== Grouped Stats by (page_id, ad_id) ===")
     try:
