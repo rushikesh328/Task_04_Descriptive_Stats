@@ -1,6 +1,6 @@
 import polars as pl
 
-filename = "filepath.csv"  # Change to your dataset file
+filename = "data/fb_ads.csv"  # Change to your dataset file
 df = pl.read_csv(filename)
 
 # Overall Descriptive Statistics
