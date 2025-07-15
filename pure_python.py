@@ -8,7 +8,7 @@ def read_csv(filepath):
 
 #change the path of file for a different dataset analysis
 if __name__ == "__main__":
-    data = read_csv(r"c:\Users\lenovo\Documents\MS documents\RA work\1-15 July\period_03\2024_fb_ads_president_scored_anon.csv") 
+    data = read_csv("data/fb_ads.csv") 
 
 def is_float(value):
     try:
