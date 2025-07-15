@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Change the path of the file for analysis of different dataset
-filename = r"c:\Users\lenovo\Documents\MS documents\RA work\1-15 July\period_03\2024_fb_ads_president_scored_anon.csv"
+filename = "filepath.csv"
 df = pd.read_csv(filename)
 
 # 1. Full dataset summary
