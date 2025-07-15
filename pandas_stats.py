@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Change the path of the file for analysis of different dataset
-filename = "filepath.csv"
+filename = "data/fb_ads.csv"
 df = pd.read_csv(filename)
 
 # 1. Full dataset summary
